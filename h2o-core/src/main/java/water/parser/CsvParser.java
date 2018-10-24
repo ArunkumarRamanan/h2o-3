@@ -80,9 +80,6 @@ class CsvParser extends Parser {
     dout.newLine();
 
     final boolean forceable = dout instanceof FVecParseWriter && ((FVecParseWriter)dout)._ctypes != null && _setup._column_types != null;
-/*    if (_setup.getSkippedColumns() !=null && _setup.get_parse_columns_indices()==null)
-      throw new H2OIllegalArgumentException("Parser:  all columns in the file are skipped and no H2OFrame" +
-              " can be returned.");*/
     int colIndexNum = _keepColumns.length-1;
     int parseIndexNum = _setup._parse_columns_indices.length-1;
 MAIN_LOOP:
